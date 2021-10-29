@@ -122,7 +122,8 @@ blockquote {
 }
 
 #content {
-    padding: 0 gutter();
+    padding-block: 0;
+    padding-inline: gutter();
 }
 
 /* @end */

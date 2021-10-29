@@ -91,7 +91,7 @@
             height: <?php echo ($useOriginalThumbnailSize == "1") ? 'auto' : '100px' ?>;
         }
 
-        @media (max-width:768px) {
+        @media (max-height:768px) {
             #primary-nav li {
                 background-color: <?php echo thanksroy_brighten($buttonColor, 40); ?>;
             }
