@@ -40,3 +40,8 @@ $break          : 48em 16;
 @media print {
   @import "print";
 }
+
+// writing-mode ---------------------------------------------------------------------
+@media screen {
+  @import "writing-mode";
+}

@@ -2316,3 +2316,8 @@ input[type=button],
 
   /* @end */
 }
+@media screen {
+  html {
+    writing-mode: vertical-lr;
+  }
+}
