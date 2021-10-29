@@ -1,21 +1,23 @@
 /* @group ----- Grid ----- */
 
 #wrap {
-    max-width: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
-    padding: 0 gutter();
+    max-inline-size: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
+    padding-block: 0;
+    padding-inline: gutter();
     margin: 0;
 }
 
 
 #content {
     @include span(12 of 16);
-    margin-right: 0;
-    padding: 40px 0;
+    margin-inline-end: 0;
+    padding-block: 40px;
+    padding-inline: 0;
 }
 
 #primary-nav {
     @include span(4 of 16);
-    margin-left: 0;
+    margin-inline-start: 0;
 }
 
 #primary {
@@ -24,14 +26,16 @@
 
 #home #primary {
     @include span(6 of 12);
-    margin-left: 0;
-    padding: 0 0 0 gutter();
+    margin-inline-start: 0;
+    padding-block: 0;
+    padding-inline: gutter() 0;
 }
 
 #home #secondary {
     @include span(6 of 12);
-    margin-right: 0;
-    padding: 0 gutter();
+    margin-inline-end: 0;
+    padding-block: 0;
+    padding-inline: gutter();
 }
 
 /* @end */
@@ -41,14 +45,15 @@
 header {
     background-size: cover !important;
     -ms-behavior: url('../javascripts/backgroundsize.min.htc');
-    border-width: 0 0 20px 0;
+    border-block-width: 0 20px;
+    border-inline-width: 0;
     border-style: solid;
 }
 
 .button.menu-button { display: none; }
 
 #primary-nav {
-    margin-top: 1.75 * $spacing-unit;
+    margin-block-start: 1.75 * $spacing-unit;
 
     ul.navigation {
         display: block;
@@ -60,8 +65,8 @@ header {
     }
 
     ul {
-        margin-top: 0;
-        margin-bottom: 2 * $spacing-unit;
+        margin-block-start: 0;
+        margin-block-end: 2 * $spacing-unit;
     }
 
     li {
@@ -78,25 +83,27 @@ header {
 }
 
 #search-container {
-    margin: $spacing-unit 0;
+    margin-block: $spacing-unit;
+    margin-inline: 0;
 }
 
 #search-form {
-    margin-bottom: $spacing-unit;
+    margin-block-end: $spacing-unit;
 }
 
 #query {
-    margin-bottom: $spacing-unit;
+    margin-block-end: $spacing-unit;
 }
 
 .secondary-nav, #secondary-nav {
-    border-bottom:1px solid #ccc;
+    border-block-end: 1px solid #ccc;
     font-size:1.125em;
 
     a {
-        padding: 0.5em 1em 0.5em;
+        padding-block: 0.5em 0.5em;
+        padding-inline: 1em;
         color: #666;
-        border-bottom: 0;
+        border-block-end: 0;
     }
 
     ul { margin: 0 0 -1px 0; }
@@ -108,7 +115,7 @@ header {
     }
 
     .active {
-        border-bottom-color: #fff;
+        border-block-end-color: #fff;
     }
 
     .current a {
@@ -117,9 +124,9 @@ header {
         font-weight:bold;
         border: {
             color: #ccc;
-            width: 1px;
+            inline-size: 1px;
             style: solid;
-            bottom: { color: #fff; };
+            block-end: { color: #fff; };
         }
     }
 }
@@ -127,10 +134,10 @@ header {
 /* == Browse Items == */
 
 .pagination {
-    width: 47%;
+    inline-size: 47%;
     overflow: hidden;
-    float: left;
-    padding-bottom: $spacing-unit;
+    float: inline-start;
+    padding-block-end: $spacing-unit;
 }
 
 nav.pagination {
@@ -138,32 +145,34 @@ nav.pagination {
 }
 
 #content > nav.pagination:nth-of-type(2) {
-	width: 47%;
+	inline-size: 47%;
 }
 
 .pagination_list {
-    margin-top: .75 * $spacing-unit;
-    float: left;
+    margin-block-start: .75 * $spacing-unit;
+    float: inline-start;
 }
 
 .pagination_list a, li.pagination_current {
     border: 1px solid #ccc;
     display: inline-block;
-    padding: (.25 * $spacing-unit) 10px;
+    padding-block: (.25 * $spacing-unit);
+    padding-inline: 10px;
     vertical-align: top;
-    margin-right: 10px;
+    margin-inline-end: 10px;
 }
 
 #sort-links  {
     clear: none;
-    float: right;
+    float: inline-end;
     ul {
-        margin-top: .75 * $spacing-unit;
-        padding-top: .5 * $spacing-unit;
+        margin-block-start: .75 * $spacing-unit;
+        padding-block-start: .5 * $spacing-unit;
     }
     span, li {
-        padding: (.25 * $spacing-unit) 0 (.25 * $spacing-unit) 20px;
-        margin-right: 0;
+        padding-block: (.25 * $spacing-unit);
+        padding-inline: 20px 0;
+        margin-inline-end: 0;
     }
 }
 
@@ -173,44 +182,45 @@ nav.pagination {
 
 div#contribution-type-form div.inputs {
     clear: none;
-    float: right;
-    width: 69%;
+    float: inline-end;
+    inline-size: 69%;
 }
 
 .field {
-    border-bottom:1px solid #ccc;
-    width:100%;
+    border-block-end: 1px solid #ccc;
+    inline-size:100%;
     overflow: auto;
-    padding: (1 * $spacing-unit) 0;
+    padding-block: (1 * $spacing-unit);
+    padding-inline: 0;
 
     .inputs,
     .columns.omega {
         clear: none;
-        float: right;
-        width: 69%;
+        float: inline-end;
+        inline-size: 69%;
     }
 
     input, input[type=text], select {
-        width: 100%;
-        float: right;
+        inline-size: 100%;
+        float: inline-end;
     }
 
     label,
     .label,
     .columns.alpha {
-        width: 29%;
-        float: left;
+        inline-size: 29%;
+        float: inline-start;
         margin: 0;
     }
 
     .columns.alpha label,
     .columns.alpha .label {
-        width: 100%;
+        inline-size: 100%;
     }
 
-    div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
+    div.field:last-of-type { display: inline-block; margin-block-end: 1em; }
 
-    div :only-child { margin-bottom: 0; }
+    div :only-child { margin-block-end: 0; }
 }
 
 /* @end */
@@ -218,29 +228,30 @@ div#contribution-type-form div.inputs {
 /* @group ----- Advanced Search Form ----- */
 
 #advanced-search-form {
-    margin-bottom: 40px;
+    margin-block-end: 40px;
 
-    .submit { float: right; }
+    .submit { float: inline-end; }
 }
 
 #advanced-search-form .search-entry input[type=text],
 #advanced-search-form .search-entry select {
-    width: calc((100% - #{(1.75 * $spacing-unit)}) / 4);
+    inline-size: calc((100% - #{(1.75 * $spacing-unit)}) / 4);
     display: inline-block;
-    margin: 0 3px 0 0;
+    margin-block: 0;
+    margin-inline: 0 3px;
     float: none;
 }
 
 #advanced-search-form .search-entry:first-child input[type="text"],
 #advanced-search-form .search-entry:first-child select {
-    width: calc((100% - #{(1.75 * $spacing-unit)}) / 3);
+    inline-size: calc((100% - #{(1.75 * $spacing-unit)}) / 3);
 }
 
 #advanced-search-form .field .remove_search {
     text-indent: -9999px;
-    margin-top: 0;
-    width: (1.25 * $spacing-unit);
-    float: right;
+    margin-block-start: 0;
+    inline-size: (1.25 * $spacing-unit);
+    float: inline-end;
     clear: none;
 
     &:after {
@@ -249,9 +260,9 @@ div#contribution-type-form div.inputs {
         font-weight: 900;
         text-indent: 0;
         text-align: center;
-        width: 100%;
-        top: 0;
-        left: 0;
+        inline-size: 100%;
+        inset-block-start: 0;
+        inset-inline-start: 0;
         position: absolute;
         line-height: 1.25 * $base-line-height;
     }
@@ -269,8 +280,8 @@ div#contribution-type-form div.inputs {
 .exhibits.summary #primary,
 #exhibit-page-navigation {
     @include span(9 of 12);
-    margin-left: 0;
-    float: left;
+    margin-inline-start: 0;
+    float: inline-start;
 }
 
 #exhibit-page-navigation {
@@ -279,7 +290,7 @@ div#contribution-type-form div.inputs {
 
 #exhibit-pages {
     @include span(3 of 12);
-    margin-right: 0;
+    margin-inline-end: 0;
     display: inline-block;
     float: none;
 }

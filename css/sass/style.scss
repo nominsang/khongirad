@@ -23,7 +23,7 @@ $break          : 48em 16;
 
 @mixin body-copy {
     line-height: $base-line-height;
-    margin-bottom: $spacing-unit;
+    margin-block-end: $spacing-unit;
 }
 
 // screen --------------------------------------------------------------------
@@ -32,7 +32,7 @@ $break          : 48em 16;
 }
 
 // 768px  --------------------------------------------------------------------
-@media screen and (min-width: 768px) {
+@media screen and (min-height: 768px) {
   @import "screen_768";
 }
 

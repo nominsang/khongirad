@@ -88,6 +88,7 @@ template {
 
 a {
   background-color: transparent;
+  text-decoration: overline;
 }
 
 /**
@@ -107,7 +108,7 @@ a:hover {
  */
 
 abbr[title] {
-  border-bottom: 1px dotted;
+  border-block-end: 1px dotted;
 }
 
 /**
@@ -134,7 +135,8 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin-block: 0.67em;
+  margin-inline: 0;
 }
 
 /**
@@ -167,11 +169,11 @@ sup {
 }
 
 sup {
-  top: -0.5em;
+  inset-block-start: -0.5em;
 }
 
 sub {
-  bottom: -0.25em;
+  inset-block-end: -0.25em;
 }
 
 /* Embedded content
@@ -201,7 +203,8 @@ svg:not(:root) {
  */
 
 figure {
-  margin: 1em 40px;
+  margin-block: 1em;
+  margin-inline: 40px;
 }
 
 /**
@@ -211,7 +214,7 @@ figure {
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  height: 0;
+  block-size: 0;
 }
 
 /**
@@ -345,7 +348,7 @@ input[type="radio"] {
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
+  block-size: auto;
 }
 
 /**
@@ -379,7 +382,8 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding-block: 0.35em 0.75em;
+  padding-inline: 0.625em;
 }
 
 /**
