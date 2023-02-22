@@ -14,7 +14,7 @@
 }
  
 html {
-  font-family: sans-serif, "Mongolian Baiti";
+  font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -2380,6 +2380,5 @@ input[type=button],
 @media screen {
   html {
     writing-mode: vertical-lr;
-    font-family: "Mongolian Baiti";
   }
 }
