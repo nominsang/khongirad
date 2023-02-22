@@ -416,7 +416,7 @@ th {
   }
 
   body {
-    font-family: "Mongolian baiti", "Noto Sans Mongolian", serif;
+    font-family: "Mongolian Baiti", "Noto Sans Mongolian", serif;
     word-break: break-word;
     font-size: 16px;
     line-height: 24px;
@@ -2380,5 +2380,6 @@ input[type=button],
 @media screen {
   html {
     writing-mode: vertical-lr;
+    font-family: "Mongolian Baiti";
   }
 }
