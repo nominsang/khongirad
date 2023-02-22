@@ -7,9 +7,10 @@
  */
 @font-face {
   font-family: "Mongolian Baiti";
-  src: url("https://nom.imu.edu.cn/static/css/fonts/monbaiti.ttf"),
+  src: local("Mongolian Baiti"),
+       url("https://nom.imu.edu.cn/static/css/fonts/monbaiti.ttf"),
        url("https://nom.imu.edu.cn/static/css/fonts/monbaiti.eot"),/* IE 9 */
-       url('https://nom.imu.edu.cn/static/css/fonts/monbaiti.eot?#iefix') format('embedded-opentype'); /* IE6~IE8 */
+       url("https://nom.imu.edu.cn/static/css/fonts/monbaiti.eot?#iefix") format('embedded-opentype'); /* IE6~IE8 */
   unicode-range: "U+1800-U+18AF";
 }
  
