@@ -6,14 +6,17 @@
  *    user zoom.
  */
 @font-face {
-  font-family: "Mongolian Baiti";
-  src: local("Mongolian Baiti"),
-       url("https://nom.imu.edu.cn/static/css/fonts/monbaiti.ttf"),
-       url("https://nom.imu.edu.cn/static/css/fonts/monbaiti.eot"),/* IE 9 */
-       url("https://nom.imu.edu.cn/static/css/fonts/monbaiti.eot?#iefix") format('embedded-opentype'); /* IE6~IE8 */
+    font-family: 'Mongolian Baiti';
+    src: url('fonts/MongolianBaiti.eot');
+    src: local('Mongolian Baiti'), local('MongolianBaiti'),
+        url('fonts/MongolianBaiti.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MongolianBaiti.woff2') format('woff2'),
+        url('fonts/MongolianBaiti.woff') format('woff'),
+        url('fonts/MongolianBaiti.ttf') format('truetype'),
+        url('fonts/MongolianBaiti.svg#MongolianBaiti') format('svg');
   unicode-range: "U+1800-U+18AF";
 }
- 
+
 html {
   font-family: sans-serif;
   /* 1 */
